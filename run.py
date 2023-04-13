@@ -1,3 +1,5 @@
+import random 
+
 def welcome_logo():
     """
     Display ASCII game logo on the terminal,
@@ -42,12 +44,9 @@ def choose_year():
     Loop through the list of years to randomly choose a year
     """
     years = [1859, 1920, 1939, 1961, 1968, 1983, 2001]
-    for year in years:
-        return year
-    chosen_year = year
-    return chosen_year
+    print(random.choice(years))
 
-    
+
 def main():
     welcome_logo()
     start_game()

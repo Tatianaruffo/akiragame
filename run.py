@@ -51,12 +51,12 @@ def choose_year():
     return chosen_year
 
 
-def show_question():
+def show_question(chosen_year):
     """
     Show the question about the respective year 
     """
     if chosen_year == 1859:
-        print("In 1859 the 'Origin of Species' was published, what's the name pf it's author?")
+        print("In 1859 the 'Origin of Species' was published, what's the name of it's author?")
         ans = input("Write your answer here: \n")
         if ans == "Charles Darwin":
             score += 10
@@ -64,7 +64,8 @@ def show_question():
         else:
             print("Incorrect!")
     elif chosen_year == 1920:
-        print("In 1920 the 19th amendment granted women the right to vote. What was the name of the movement that fought for this right?")
+        print("In 1920 the 19th amendment granted women the right to vote in the USA.")
+        print("What was the name of the movement that fought for this right?")
         ans = input("Write your answer here: \n")
         if ans == "suffrage" or "suffragists":
             score += 10
@@ -100,7 +101,8 @@ def show_question():
         else:
             print("Incorrect!")
     elif chosen_year == 2001:
-        print("On the 11th of September, 2001 hijackers inspired by Islamist extremism killdc nearly 3,000 people after crashing commercial aircrafts into a famous Manhattan building")
+        print("On the 11th of September, 2001 hijackers inspired by Islamist extremism")
+        print("killed nearly 3,000 people after crashing commercial aircrafts into a famous Manhattan building")
         print("What was the name of this building?")
         ans = input("Write your answer here: \n")
         if ans == "World Trade Center":
@@ -110,13 +112,10 @@ def show_question():
             print("Incorrect!")
     
 
-
-
 def main():
     welcome_logo()
     start_game()
-    choose_year()
     chosen_year = choose_year()
-    show_question()
+    show_question(chosen_year)
 
 main()

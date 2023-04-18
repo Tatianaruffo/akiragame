@@ -58,3 +58,7 @@ Play the game [here]! ()
  - Present the quiz in a clean and easy to understand manner
  - Keep good UX principles regarding colours/interaction
  - Robust Python code without issues/bugs
+
+
+## Flow Chart
+![Flowchart](docs/Flowchart.jpeg)

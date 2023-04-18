@@ -1,5 +1,5 @@
 import random 
-from questions import QUESTIONS
+from questions import question1, question2, question3, question4, question5, question6
 import time
 
 SCORE = 0
@@ -55,32 +55,24 @@ def username_input():
 
 
 def game():
-    for key in QUESTIONS:
-        print(key)
-    answer_input = answer()
+    global SCORE
+    questions = {question1: "a", question2: "b", question3: "a", question4: "b", question5: "c", question6: "b"}
+    for i in questions:
+        print(i)
+        ans = input("Write your answer here(a/b/c):\n")
+        if ans == questions[i]:
+            print("Spot on!")
+            score = SCORE+1
+        else:
+            print("Incorrect!")
+            score = SCORE-1
 
-
-
-def answer():
-    """
-    Get the answer input from user
-    """
-    while True:
-        answer = input("Write your answer here:\n")
-
-    if answer == QUESTIONS.values():
-        print("Spot on!")
-    else:
-        print("Incorrect!")
-
-    answer_input = answer
-
-    return answer_input
 
 
 def main():
     welcome_logo()
     username_input()
+    game()
 
 
 main()

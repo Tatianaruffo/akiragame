@@ -1,7 +1,9 @@
 import random 
 from questions import QUESTIONS
+import time
 
-score = 0
+SCORE = 0
+NAME = ""
 
 def welcome_logo():
     """
@@ -17,30 +19,39 @@ def welcome_logo():
 /_/  /_//_/_/_/\__/ /_/  /_/ \_,_/ \__//_//_//_//_//_/\__/ 
                                                            
         """)
+    time.sleep(1)
     print("The computer will randomly choose a year in the past")
+    time.sleep(0.5)
     print("You'll be given a question about an important fact of the year you're at")
+    time.sleep(0.5)
     print("Type you're answer and you will travel to a new year destination")
+    time.sleep(0.5)
     print("For every right question you'll earn 10 points")
+    time.sleep(0.5)
     print("Guess it right and you'll be able to go back to 2023, otherwise I wish you good luck")
 
-def start_game():
-    """
-    Asks for the username and start the game 
-    """
-    username = " "
-    while True:
-        username = input("Please enter your Name: \n")
 
-        if username.isalnum() != True:
-            print("Error: Letters and numbers only.")
-            continue
-        else:
-            print(f"Hi {username}!")
-            input("When you are ready to time travel, press the Enter key")
-            return username
+def username_input():
+    """
+    Asks for the username and if the user wants to start the game 
+    """
+    global NAME 
+    NAME = input("Please enter your name and press Enter: \n")
 
-    print(f"Hi {username}!")
-    input("When you're ready to time travel, press the Enter key")
+    if NAME.isalnum() != True:
+        print("Error: Letters and numbers only.")
+    else:
+        start_quiz = input(f"Hi {NAME}! Are you ready to time travel? (y/n)")
+            
+    while start_quiz != "y":
+        start_quiz = input(f"Please enter 'y' to begin {NAME}, or, if you're not ready, "
+                           "press Enter to stop and complete the quiz another time: ")
+        break
+
+    if start_quiz.lower() == "y":
+        print("Engines on! Let's start. Good luck!\n")
+
+    return NAME
 
 
 def game():
@@ -48,18 +59,20 @@ def game():
         print(key)
     answer_input = answer()
 
-    if answer() == QUESTIONS.values():
-        print("Spot on!")
-    else:
-        print("Incorrect!")
 
 
 def answer():
     """
     Get the answer input from user
     """
-    
-    answer = input("Write your answer here:\n")
+    while True:
+        answer = input("Write your answer here:\n")
+
+    if answer == QUESTIONS.values():
+        print("Spot on!")
+    else:
+        print("Incorrect!")
+
     answer_input = answer
 
     return answer_input
@@ -67,9 +80,7 @@ def answer():
 
 def main():
     welcome_logo()
-    start_game()
-    game()
-    answer()
+    username_input()
 
 
 main()

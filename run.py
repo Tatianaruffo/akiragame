@@ -63,19 +63,25 @@ def username_input():
 
     if NAME.isalnum() != True:
         print("Error: Letters and numbers only.")
+        username_input()
     else:
         start_quiz = input(f"Hi {NAME}! Are you ready to time travel?(y/n) ")
             
     while start_quiz != "y":
         start_quiz = input(f"Please enter 'y' to begin {NAME}, or, if you're not ready, "
-                           "press Enter to stop and complete the quiz another time: ")
-        break
+                           "press enter and complete the quiz another time: ")
+        print(' ')
+        clear_screen()
+        print(Fore.GREEN + 'Maybe next time!\n')
+        time.sleep(1)
+        print(Fore.GREEN + 'Powering down Time Machine....\n')
+        exit()
 
     if start_quiz.lower() == "y":
         typing_print("\nStarting engines!\n")
         typing_print("\nJust one more second....\n")
         typing_print("\nLet's play!!")
-        time.sleep(3.5)
+        time.sleep(3.0)
         os.system('cls' if os.name == 'nt' else 'clear')
 
     return NAME

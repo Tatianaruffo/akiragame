@@ -36,7 +36,7 @@ def welcome_logo():
     """
     print(Fore.GREEN + 'Presenting:')
     print(Fore.RED + r"""
-        
+      
  ______ _              __  ___            __    _          
 /_  __/(_)__ _  ___   /  |/  /___ _ ____ / /   (_)___  ___ 
  / /  / //  ' \/ -_) / /|_/ // _ `// __// _ \ / // _ \/ -_)
@@ -77,7 +77,8 @@ def username_input():
     while start_quiz != "y":
         start_quiz = input(f"Please enter 'y' to begin {NAME},"
                            "or, if you're not ready,"
-                           "press enter and complete the quiz another time: \n")
+                           "press enter and complete the quiz"
+                           "another time: \n")
         print(' ')
         clear_screen()
         print(Fore.GREEN + 'Maybe next time!\n')

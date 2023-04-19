@@ -73,10 +73,35 @@ The below elements are available to be experienced by the user across the quiz g
 
 ### Introduction and instructions 
 
-* Shows the story of the game and the rules 
+* Shows the story of the game, the rules and asks for the username 
 
-![Introduction]()
+![Introduction](docs/introduction.gif)
+
+* Asks if the user wants to start the game
+* If the user answer "y" the quiz starts
+
+![Start-game](docs/startgame.gif)
+
+* If the user answer "n" the it gives another chance to input y, if not it ends the game
+
+![end-game](docs/endgame.gif)
+
+### Questions
+
+* The Quiz contains 6 questions, with 3 choices each
+
+![quiz](docs/quiz.gif)
+
+* If the user answer all 6 questions right a special "Well Done" message appears
+* At the end the user can choose if wants to play the quiz again, if yes the game restarts 
+
+![endquiz](docs/endquiz.gif)
+
+* If the user insert a different input than a,b or c it shows incorrect and goes back to the same question
+
+![wrong-input](docs/wrongInput.gif)
+
 
 
 ## Flow Chart
-![Flowchart](docs/Flowchart.jpeg)
+![Flowchart](docs/Flowchart.jpg)

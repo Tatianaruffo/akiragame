@@ -3,8 +3,9 @@ import sys
 import colorama
 import os
 from colorama import Fore
-colorama.init(autoreset=True) 
-from questions import question1, question2, question3, question4, question5, question6
+from questions import q1, q2, q3, q4, q5, q6
+colorama.init(autoreset=True)
+
 
 SCORE = 0
 NAME = ""
@@ -67,14 +68,15 @@ def username_input():
     global NAME 
     NAME = input("\nPlease enter your name and press Enter: \n")
 
-    if NAME.isalnum() != True:
+    if NAME.isalnum() is not True:
         print("Error: Letters and numbers only.")
         username_input()
     else:
         start_quiz = input(f"Hi {NAME}! Are you ready to time travel?(y/n) ")
             
     while start_quiz != "y":
-        start_quiz = input(f"Please enter 'y' to begin {NAME}, or, if you're not ready, "
+        start_quiz = input(f"Please enter 'y' to begin {NAME},"
+                           "or, if you're not ready,"
                            "press enter and complete the quiz another time: ")
         print(' ')
         clear_screen()
@@ -95,22 +97,31 @@ def username_input():
 
 def game():
     global SCORE
-    questions = {question1: "a", question2: "b", question3: "a", question4: "b", question5: "c", question6: "b"}
+    questions = {
+                q1: "a",
+                q2: "b",
+                q3: "a",
+                q4: "b",
+                q5: "c",
+                q6: "b"
+                }
     for i in questions:
-        print(Fore.GREEN + i)
-        ans = input("Write your answer here(a/b/c):\n")
-        if ans == questions[i]:
-            print("Spot on!")
-            SCORE = SCORE+1
-            print("Current score is:", SCORE)
-            time.sleep(3.5)
-            os.system('cls' if os.name == 'nt' else 'clear')
-        else:
-            print("Incorrect!")
-            SCORE = SCORE-1
-            print("Current score is:", SCORE)
-            time.sleep(3.5)
-            os.system('cls' if os.name == 'nt' else 'clear')
+        ans = ""
+        while ans not in ["a", "b", "c"]:
+            print(Fore.GREEN + i)
+            ans = input("Write your answer here(a/b/c):\n")
+            if ans == questions[i]:
+                print("Spot on!")
+                SCORE = SCORE+1
+                print("Current score is:", SCORE)
+                time.sleep(3.5)
+                os.system('cls' if os.name == 'nt' else 'clear')
+            else:
+                print("Incorrect!")
+                SCORE = SCORE-1
+                print("Current score is:", SCORE)
+                time.sleep(3.5)
+                os.system('cls' if os.name == 'nt' else 'clear')
     print("Final score is:", SCORE)
 
     if SCORE == 6:
@@ -152,5 +163,6 @@ def main():
     username_input()
     game()
     replay_game()
+    
 
 main()

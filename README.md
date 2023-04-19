@@ -19,7 +19,7 @@ Play the game [here]! ()
   * [User Stories](#user-stories)
 
 * [Features](#features)
-  * [Welcome](#welcome)
+  * [Welcome Logo](#welcome-logo)
   * [Story](#story)
   * [Name input](#name-input)
   * [Quiz](#quiz)
@@ -58,6 +58,24 @@ Play the game [here]! ()
  - Present the quiz in a clean and easy to understand manner
  - Keep good UX principles regarding colours/interaction
  - Robust Python code without issues/bugs
+
+## Features
+
+### Application Elements
+
+The below elements are available to be experienced by the user across the quiz game application as a whole.
+
+### Welcome Logo
+
+* Quote and ASCII art
+
+![Welcome Logo](docs/WelcomeLogo.JPG)
+
+### Introduction and instructions 
+
+* Shows the story of the game and the rules 
+
+![Introduction]()
 
 
 ## Flow Chart

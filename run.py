@@ -1,10 +1,10 @@
-import time, sys
+import time
+import sys
 import colorama
 import os
 from colorama import Fore
 colorama.init(autoreset=True) 
 from questions import question1, question2, question3, question4, question5, question6
-
 
 SCORE = 0
 NAME = ""
@@ -45,13 +45,19 @@ def welcome_logo():
     time.sleep(1)
     typing_print("The computer will randomly choose a year in the past")
     time.sleep(0.5)
-    typing_print("\nYou'll be given a question about an important fact of the year you're at")
+    typing_print("\nYou'll be given a question about an important fact")
+    time.sleep(0.5)
+    typing_print("\nof the year you're at")
     time.sleep(0.5)
     typing_print("\nType your answer and you will travel to a new destination")
     time.sleep(0.5)
-    typing_print("\nFor every right question you'll earn 10 points")
+    typing_print("\nFor every right question you'll earn 1 point")
     time.sleep(0.5)
-    typing_print("\nGuess it right and you'll be able to go back to 2023, otherwise I wish you a good luck\n")
+    typing_print("\nAnd for every wrong question you'll loose 1 point")
+    time.sleep(0.5)
+    typing_print("\nGuess it right and you'll be able to go back to 2023")
+    time.sleep(0.5)
+    typing_print("\nOtherwise I wish you a good luck\n")
 
 
 def username_input():

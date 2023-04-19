@@ -178,6 +178,8 @@ for creating a terminal where my Python code will generate its output. The steps
 
 The live link can be found [here](https://time-machine-game.herokuapp.com/)
 
+## Testing
+
 <table>
   <tr>
     <th>Test</th>

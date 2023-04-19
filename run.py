@@ -72,12 +72,12 @@ def username_input():
         print("Error: Letters and numbers only.")
         username_input()
     else:
-        start_quiz = input(f"Hi {NAME}! Are you ready to time travel?(y/n) ")
+        start_quiz = input(f"Hi {NAME}! Are you ready to time travel?(y/n)\n")
             
     while start_quiz != "y":
         start_quiz = input(f"Please enter 'y' to begin {NAME},"
                            "or, if you're not ready,"
-                           "press enter and complete the quiz another time: ")
+                           "press enter and complete the quiz another time: \n")
         print(' ')
         clear_screen()
         print(Fore.GREEN + 'Maybe next time!\n')
@@ -163,6 +163,6 @@ def main():
     username_input()
     game()
     replay_game()
-    
+
 
 main()

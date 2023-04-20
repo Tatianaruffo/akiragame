@@ -42,17 +42,16 @@ def welcome_logo():
     """
     print(Fore.GREEN + 'Presenting:')
     print(Fore.RED + r"""
-      
- ______ _              __  ___            __    _          
-/_  __/(_)__ _  ___   /  |/  /___ _ ____ / /   (_)___  ___ 
+ ______ _              __  ___            __    _
+/_  __/(_)__ _  ___   /  |/  /___ _ ____ / /   (_)___  ___
  / /  / //  ' \/ -_) / /|_/ // _ `// __// _ \ / // _ \/ -_)
-/_/  /_//_/_/_/\__/ /_/  /_/ \_,_/ \__//_//_//_//_//_/\__/ 
-                                                           
+/_/  /_//_/_/_/\__/ /_/  /_/ \_,_/ \__//_//_//_//_//_/\__/
         """)
     time.sleep(1)
     typing_print("The computer will randomly choose a year in the past")
     time.sleep(0.5)
-    typing_print("\nYou'll be given a question about an important fact of the year")
+    typing_print("\nYou'll be given a question about an important fact"
+                 " of the year")
     time.sleep(0.5)
     typing_print("\nType your answer and you will travel to a new destination")
     time.sleep(0.5)
@@ -65,9 +64,9 @@ def welcome_logo():
 
 def username_input():
     """
-    Asks for the username and if the user wants to start the game 
+    Asks for the username and if the user wants to start the game
     """
-    global NAME 
+    global NAME
     NAME = input("\nPlease enter your name and press Enter: \n")
 
     if NAME.isalnum() is not True:
@@ -75,7 +74,7 @@ def username_input():
         username_input()
     else:
         start_quiz = input(f"Hi {NAME}! Are you ready to time travel?(y/n)\n")
-            
+
     while start_quiz != "y":
         start_quiz = input(f"Please enter 'y' to begin {NAME},"
                            "or, if you're not ready,"
@@ -94,7 +93,6 @@ def username_input():
         typing_print("\nLet's play!!")
         time.sleep(3.0)
         os.system('cls' if os.name == 'nt' else 'clear')
-
     return NAME
 
 
@@ -113,18 +111,22 @@ def game():
         while ans not in ["a", "b", "c"]:
             print(Fore.GREEN + i)
             ans = input("Write your answer here(a/b/c):\n")
-            if ans == questions[i]:
-                print("Spot on!")
-                SCORE = SCORE+1
-                print("Current score is:", SCORE)
-                time.sleep(3.5)
+            if ans not in ["a", "b", "c"]:
+                print("Answer should be a, b or c only !!")
+                time.sleep(3.0)
                 os.system('cls' if os.name == 'nt' else 'clear')
-            else:
-                print("Incorrect!")
-                SCORE = SCORE-1
-                print("Current score is:", SCORE)
-                time.sleep(3.5)
-                os.system('cls' if os.name == 'nt' else 'clear')
+        if ans == questions[i]:
+            print("Spot on!")
+            SCORE = SCORE+1
+            print("Current score is:", SCORE)
+            time.sleep(3.5)
+            os.system('cls' if os.name == 'nt' else 'clear')
+        else:
+            print("Incorrect!")
+            SCORE = SCORE-1
+            print("Current score is:", SCORE)
+            time.sleep(3.5)
+            os.system('cls' if os.name == 'nt' else 'clear')
     print("Final score is:", SCORE)
 
     if SCORE == 6:

@@ -121,8 +121,7 @@ The below elements are available to be experienced by the user across the quiz g
 Code Institute's [Python Linter](https://pep8ci.herokuapp.com/) was the main resouce during the code validation process. The relevant code passes with overall success with occassional minor warnings.
 
 <details><summary>PEP8 Validation: run.py</summary>
-<img src="docs/validator.JPG">
-<ul><li>The errors "Trailing white space" detected for this file come from the ASCII art implemented to display the logo of the game. While these warnings can be avoided by removing the logo art, this would take away from the identity of the game.</li></ul>
+<img src="docs/validator-code.JPG">
 </details>
 
 ## Technologies Used

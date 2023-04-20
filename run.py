@@ -1,3 +1,6 @@
+"""
+Import libraries essential to the function of this application.
+"""
 import time
 import sys
 import colorama
@@ -97,6 +100,12 @@ def username_input():
 
 
 def game():
+    """
+    Checks if the user answer is a,b or c
+    Display the quiz questions
+    Display the score during the game
+    Display the score at the end of the game
+    """
     global SCORE
     questions = {
                 q1: "a",
@@ -138,7 +147,7 @@ def replay_game():
     """
     Asks if the user wants to restart the game
     if yes the game runs again
-    if no it terminates the applicationtatu
+    if no it terminates the application
     """
     replay = input(Fore.RED + "\nWould you like to try again? (y/n)\n")
     if replay == "y":
@@ -163,6 +172,9 @@ def replay_game():
 
 
 def main():
+    """
+    Execute all fundamental program functions.
+    """
     clear_screen()
     welcome_logo()
     username_input()

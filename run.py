@@ -24,9 +24,15 @@ def typing_print(text):
 
 def clear_screen():
     """
-    Clear the terminal
+    Clean the terminal on windows, mac and
+    linux for a better user experience.
     """
-    os.system("clear")
+    # for windows
+    if os.name == 'nt':
+        os.system('cls')
+    # for mac and linux(here, os.name is 'posix')
+    else:
+        os.system('clear')
 
 
 def welcome_logo():

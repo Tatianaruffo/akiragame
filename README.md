@@ -35,11 +35,7 @@ Play the game [here](https://time-machine-game.herokuapp.com/)
 
 * [Testing](#testing)
 
-* [Future Implementations](#future-implementations)  
-
-* [Credits](#credits)
-  * [Code used and adapted](#code-used-and-adapted)
-  * [Acknowledgments](#acknowledgments)
+* [Credits and References](#credits-and-references)
 
 ---
 
@@ -225,6 +221,10 @@ The live link can be found [here](https://time-machine-game.herokuapp.com/)
     <td>The user can choose if wants to play again or quit the game wihtout any issues</td>
     <td>Yes</td>
   </tr>
+  <tr>
+    <td>The quiz restarts at the name input section(not at the welcome message) if the user decides to run it again</td>
+    <td>Yes</td>
+  </tr>
 </table>
 
 ### Manual testing
@@ -234,3 +234,11 @@ I have carried out the following manual tests throughout the development process
   - Given invalid input at each input stage to check invalid data is dealt with in the way I expected.
   - Tested in my local terminal and the deployed Heroku terminal.
   - Asked friends and family to play the quiz to check that it works on various browsers and that the quiz functionality is understandable.
+
+## Credits and References
+
+- [Code Institute template](https://github.com/Code-Institute-Org/python-essentials-template "Link to CI Python template") was used to start the project.
+- [101Computing](https://www.101computing.net/python-typing-text-effect/ "Link to 101 Computing") for clear screen and type effect references
+- [Love Sandwiches]() Exporting results functionality based on Love Sandwiches Walkthrough project by Code Institute.
+- [W3Schools](https://www.w3schools.com/): This website has been key in understanding and getting further practice with various approaches to coding with Python3.
+    - [Python Iterators](https://www.w3schools.com/python/python_iterators.asp)

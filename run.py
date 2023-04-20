@@ -147,7 +147,6 @@ def replay_game():
         print(Fore.GREEN + 'Restarting game...\n')
         time.sleep(1)
         clear_screen()
-        welcome_logo()
         username_input()
         game()
         replay_game()
@@ -173,4 +172,5 @@ def main():
     replay_game()
 
 
-main()
+if __name__ == '__main__':
+    main()

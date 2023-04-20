@@ -166,6 +166,7 @@ def replay_game():
 
 
 def main():
+    clear_screen()
     welcome_logo()
     username_input()
     game()
